@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Smart  Login System</title>
+</head>
+<body class="bg-info-subtle">
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container px-5 mb-5">
+        <a class="navbar-brand text-secondary" href="#">SMART LOGIN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a onclick="logout()" class="btn btn-outline-danger text-secondary ">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+   
+  <div class ="container  my-5 text-center " id="loginShow">
+    <div class="shadow p-5 w-75 m-auto">
+      <h2 class="text-secondary " id="textWelcome"> </h2>
+    </div>
+  </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/mine.js"></script>
+    <script>
+        window.onload = function () {
+            if (localStorage.getItem('loginUserName') == null) {
+                window.location.href = "./index.html";
+            }
+            else {
+                document.getElementById('textWelcome').innerHTML = "Welcome " + JSON.parse(localStorage.getItem('loginUserName'));
+
+            }
+        };
+    </script>
+</body>
+</html>

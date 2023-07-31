@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+}
+.form-control:focus {
+ 
+    box-shadow: 0 0 0 0rem rgba(13,110,253,.25)
+}
+h1{
+    font-size: 3.3rem;
+}
+body{
+    font-size:1.3rem
+}
+a:hover{
+    text-decoration: underline;
+
+}
+.incorrect,.correct,.incorrectMail{
+    display: none;
+}
